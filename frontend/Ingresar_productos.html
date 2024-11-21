@@ -26,46 +26,45 @@
             <button class="btn-cerrar">Cerrar</button>
         </header>
 
-        <div class="formulario-producto">
+        <form id="form-producto" class="formulario-producto">
             <div class="formulario-izquierda">
                 <div class="imagen-placeholder">+</div>
-                <input type="file" id="imagen-producto">
+                <input type="file" id="imagen-producto" accept="image/*">
             </div>
             <div class="formulario-derecha">
                 <div class="grupo-formulario">
                     <label for="categoria">Categoría</label>
                     <select id="categoria" required>
-                        <option value="Almuerzo">Almuerzo</option>
-                        <option value="Desayuno">Desayuno</option>
-                        <option value="Golosinas">Golosinas</option>
-                        <option value="Snacks">Snacks</option>
-                        <option value="Bebidas">Bebidas</option>
+                        <option value="8">Almuerzo</option>
+                        <option value="7">Desayuno</option>
+                        <option value="6">Golosinas</option>
+                        <option value="5">Snacks</option>
+                        <option value="4">Bebidas</option>
                     </select>
-                </div>                
+                </div>
                 <div class="grupo-formulario">
                     <label for="cantidad">Cantidad</label>
-                    <input type="number" id="cantidad" placeholder="Ingrese la cantidad de productos que va a entrar en el sistema">
+                    <input type="number" id="cantidad" placeholder="Ingrese la cantidad de productos" required>
                 </div>
                 <div class="grupo-formulario">
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" placeholder="Ingrese el nombre del producto">
+                    <input type="text" id="nombre" placeholder="Ingrese el nombre del producto" required>
                 </div>
                 <div class="grupo-formulario">
                     <label for="precio">Precio</label>
-                    <input type="number" id="precio" placeholder="Ingrese el precio del prodcuto">
+                    <input type="number" id="precio" placeholder="Ingrese el precio del producto" required>
                 </div>
                 <div class="grupo-formulario">
                     <label for="descripcion">Descripción</label>
-                    <textarea id="descripcion" placeholder="Ingrese la descripcion del producto"></textarea>
+                    <textarea id="descripcion" placeholder="Ingrese la descripción del producto" required></textarea>
                 </div>
             </div>
-        </div>
-
-        <div class="botones">
-            <button class="btn btn-guardar" onclick="guardarProducto()">GUARDAR</button>
-            <button class="btn btn-descartar" onclick="descartarProducto()">DESCARTAR</button>
-            <button class="btn btn-stock" onclick="eliminarTodosLosProductos()">ELIMINAR TODOS</button>
-        </div>
+            <div class="botones">
+                <button type="submit" class="btn btn-guardar">GUARDAR</button>
+                <button type="button" class="btn btn-descartar" onclick="descartarProducto()">DESCARTAR</button>
+                <button type="button" class="btn btn-stock" onclick="eliminarTodosLosProductos()">ELIMINAR TODOS</button>
+            </div>
+        </form>
 
         <div class="lista-productos"></div>
     </div>
